@@ -27,7 +27,7 @@ echo "Your build number is: \\${REQUEST_ID} -> ${REQUEST_ID}"'''
         stage('Fetching frontend') {
           steps {
             echo 'checking if folder exist'
-            sh '[ -d "prisoner" ] && echo "Core already cloned." || git clone https://github.com/EGPAFMalawiHIS/prisonemr.git'
+            sh '[ -d "prisonemr" ] && echo "Core already cloned." || git clone https://github.com/EGPAFMalawiHIS/prisonemr.git'
             echo 'Giving access to users'
             sh 'cd $WORKSPACE && chmod 777 prisonemr'
             echo 'Fetching New Tags'
