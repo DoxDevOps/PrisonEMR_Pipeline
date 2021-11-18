@@ -16,7 +16,7 @@ echo "Your build number is: \\${REQUEST_ID} -> ${REQUEST_ID}"'''
           steps {
             echo 'Starting to fetch API from GitHub'
             echo 'Checking if folder exists.'
-            sh '[ -d "prisonemr_backend" ] && echo "folder already cloned." || git clone https://zio-git:Lovebird1!egpaf_2021@github.com/EGPAFMalawiHIS/prisonemr_backend.git'
+            sh '[ -d "prisonemr_backend" ] && echo "folder already cloned." || git clone https://github.com/EGPAFMalawiHIS/prisonemr_backend.git'
             echo 'Giving access to all users'
             sh 'cd $WORKSPACE && chmod 777 prisonemr_backend'
             echo 'Fetching Tags'
@@ -27,7 +27,7 @@ echo "Your build number is: \\${REQUEST_ID} -> ${REQUEST_ID}"'''
         stage('Fetching frontend') {
           steps {
             echo 'checking if folder exist'
-            sh '[ -d "prisoner" ] && echo "Core already cloned." || git clone https://zio-git:Lovebird1!egpaf_2021@github.com/EGPAFMalawiHIS/prisonemr.git'
+            sh '[ -d "prisoner" ] && echo "Core already cloned." || git clone https://github.com/EGPAFMalawiHIS/prisonemr.git'
             echo 'Giving access to users'
             sh 'cd $WORKSPACE && chmod 777 prisonemr'
             echo 'Fetching New Tags'
