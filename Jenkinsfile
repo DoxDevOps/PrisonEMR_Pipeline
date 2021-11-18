@@ -20,7 +20,7 @@ echo "Your build number is: \\${REQUEST_ID} -> ${REQUEST_ID}"'''
             echo 'Giving access to all users'
             sh 'cd $WORKSPACE && chmod 777 prisonemr_backend'
             echo 'Fetching Tags'
-            sh 'cd $WORKSPACE/prisonemr_backend && git fetch --tags -f'
+            sh '#cd $WORKSPACE/prisonemr_backend && git fetch --tags -f'
           }
         }
 
@@ -31,7 +31,7 @@ echo "Your build number is: \\${REQUEST_ID} -> ${REQUEST_ID}"'''
             echo 'Giving access to users'
             sh 'cd $WORKSPACE && chmod 777 prisonemr'
             echo 'Fetching New Tags'
-            sh 'cd $WORKSPACE/prisonemr && git fetch --tags -f'
+            sh '#cd $WORKSPACE/prisonemr && git fetch --tags -f'
           }
         }
 
